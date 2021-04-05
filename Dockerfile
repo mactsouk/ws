@@ -9,7 +9,7 @@ FROM golang:alpine AS builder
 RUN apk update && apk add --no-cache git
 
 RUN mkdir $GOPATH/src/server
-ADD ./wd.go $GOPATH/src/server
+ADD ./ws.go $GOPATH/src/server
 WORKDIR $GOPATH/src/server
 RUN go mod init
 RUN go mod tidy
