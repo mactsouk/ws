@@ -13,7 +13,7 @@ import (
 	"github.com/gorilla/websocket"
 )
 
-var SERVER = "ws://localhost:1234/"
+var SERVER = ""
 var PATH = ""
 var TIMESWAIT = 0
 var TIMESWAITMAX = 5
@@ -31,7 +31,7 @@ func getInput(input chan string) {
 func main() {
 	arguments := os.Args
 	if len(arguments) != 3 {
-		fmt.Println("Need SERVER PATH!")
+		fmt.Println("Need SERVER + PATH!")
 		return
 	}
 
